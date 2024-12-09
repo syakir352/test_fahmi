@@ -1,0 +1,65 @@
+.dashboard-page {
+    --ion-background-color: #f9f9f9;
+  
+    .header-section {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(45deg, #4e8ef7, #5ac8fa);
+      color: white;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  
+      h1 {
+        font-size: 24px;
+        font-weight: bold;
+      }
+  
+      p {
+        margin-top: 5px;
+        font-size: 16px;
+      }
+    }
+  
+    ion-list {
+      margin-top: 20px;
+  
+      .destination-card {
+        margin: 10px 15px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+        ion-thumbnail {
+          img {
+            border-radius: 8px;
+          }
+        }
+  
+        ion-label {
+          h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
+          }
+  
+          p {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #666;
+  
+            ion-icon {
+              font-size: 14px;
+              margin-right: 5px;
+            }
+          }
+        }
+  
+        ion-button {
+          margin-left: auto;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+  

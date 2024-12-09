@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Bariwisata-Apps</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="dashboard-page">
+  <!-- Header Section -->
+  <div class="header-section">
+    <h1>Selamat Datang!</h1>
+    <p>Jelajahi destinasi wisata terbaik di Indonesia.</p>
+  </div>
+
+  <!-- List Destinasi -->
+  <ion-list>
+    <ion-item *ngFor="let destination of destinations" class="destination-card">
+      <ion-thumbnail slot="start" class="destination-image">
+        <img [src]="destination.imageUrl" alt="{{ destination.name }}">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ destination.name }}</h2>
+        <p><ion-icon name="location-outline"></ion-icon> {{ destination.location }}</p>
+        <p><ion-icon name="pricetag-outline"></ion-icon> Rp {{ destination.price }}</p>
+      </ion-label>
+      <ion-button fill="solid" color="secondary" (click)="goToDetail(destination)">
+        Detail
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

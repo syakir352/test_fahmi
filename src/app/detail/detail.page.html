@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ destination.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <ion-img [src]="destination.imageUrl" alt="{{ destination.name }}"></ion-img>
+    <div class="overlay">
+      <h1>{{ destination.name }}</h1>
+      <p>{{ destination.location }}</p>
+    </div>
+  </div>
+
+  <!-- Detail Section -->
+  <div class="details-section ion-padding">
+    <h2>{{ destination.name }}</h2>
+    <p class="location">
+      <ion-icon name="location-outline"></ion-icon> {{ destination.location }}
+    </p>
+    <p class="price">
+      <ion-icon name="pricetag-outline"></ion-icon> 
+      {{ destination.price | currency:'IDR' }}
+    </p>
+    <p class="description">{{ destination.description }}</p>
+
+    <!-- Action Buttons -->
+    <ion-button expand="block" color="success" (click)="bookNow()">
+      Pesan Sekarang
+    </ion-button>
+    <ion-button expand="block" fill="outline" color="medium" (click)="shareDestination()">
+      Bagikan
+    </ion-button>
+  </div>
+</ion-content>
